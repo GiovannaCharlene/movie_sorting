@@ -1,0 +1,44 @@
+{
+  "movies": [
+    {
+      "title": "Inception",
+      "genre": "Sci-Fi",
+      "rating": 8.8,
+      "release_date": "2010-07-16"
+    },
+    {
+      "title": "The Matrix",
+      "genre": "Sci-Fi",
+      "rating": 8.7,
+      "release_date": "1999-03-31"
+    },
+    {
+      "title": "Interstellar",
+      "genre": "Adventure",
+      "rating": 8.6,
+      "release_date": "2014-11-07"
+    },
+    {
+      "title": "Parasite",
+      "genre": "Drama",
+      "rating": 8.6,
+      "release_date": "2019-05-30"
+    },
+    {
+      "title": "The Godfather",
+      "genre": "Crime",
+      "rating": 9.2,
+      "release_date": "1972-03-24"
+    },
+    {
+      "title": "The Dark Knight",
+      "genre": "Action",
+      "rating": 9.0,
+      "release_date": "2008-07-18"
+    }
+  ],
+  "sort_order": [
+    ["rating", true],
+    ["release_date", false]
+  ]
+}
