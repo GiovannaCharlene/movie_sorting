@@ -32,15 +32,16 @@ def sort_movies():
 
 @app.route("/demo", methods=["GET"])
 def demo_sort():
-    # Obtener ruta relativa al archivo movies.json
+    # Get relative path to the movies.json file
     json_path = os.path.join(os.path.dirname(__file__), "movies.json")
     try:
         with open(json_path, "r", encoding="utf-8") as f:
-            movies = json.load(f)
+            data = json.load(f)
     except Exception as e:
         return jsonify({"error": f"Error reading movies.json: {str(e)}"}), 500
 
-    # Orden fijo: rating (desc), release_date (asc)
+    movies = data.get("movies", [])
+    # Fixed sort order: rating (desc), release_date (asc)
     sort_order = [("rating", True), ("release_date", False)]
     result = multisort(movies, sort_order)
     return jsonify(result)
